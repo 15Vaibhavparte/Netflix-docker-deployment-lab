@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone the Code') {
             steps {
-                git credentialsId: 'git-creds', url: 'https://github.com/KastroVKiran/Netflix-Pipeline-Project.git'
+                git credentialsId: 'git-creds', url: 'https://github.com/Netflix-Pipeline-Project.git'
             }
         }
     }
@@ -25,7 +25,7 @@ pipeline {
     stages {
         stage('Clone the Code') {
             steps {
-                git credentialsId: 'git-creds', url: 'https://github.com/KastroVKiran/Netflix-Pipeline-Project.git'
+                git credentialsId: 'git-creds', url: 'https://github.com/Netflix-Pipeline-Project.git'
             }
         }
         stage('Maven Build') {
@@ -67,7 +67,7 @@ pipeline {
     stages {
         stage('Clone the Code') {
             steps {
-                git credentialsId: 'git-creds', url: 'https://github.com/KastroVKiran/Netflix-Pipeline-Project.git'
+                git credentialsId: 'git-creds', url: 'https://github.com/Netflix-Pipeline-Project.git'
             }
         }
         stage('Maven Build') {
