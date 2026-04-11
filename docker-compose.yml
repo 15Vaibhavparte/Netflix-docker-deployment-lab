@@ -1,0 +1,11 @@
+volumes:
+  myvol:
+
+services:
+  netflix-app:
+    image: netflix-image:v3
+    ports:
+      - 9090:8080
+    volumes:
+      - myvol:/tmp
+    restart: always
