@@ -9,6 +9,6 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 COPY target/NETFLIX-1.2.3.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose the default Tomcat port
-EXPOSE 8080
+EXPOSE 9090
 
 CMD ["catalina.sh", "run"]
