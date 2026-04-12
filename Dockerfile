@@ -1,5 +1,5 @@
 # Use Tomcat 9 with JDK 17 as the base image
-FROM tomcat:9.0-jdk17-openjdk-slim
+FROM tomcat:9-jre17-temurin-jammy
 
 # Remove the default Tomcat web apps to keep it clean
 RUN rm -rf /usr/local/tomcat/webapps/*
