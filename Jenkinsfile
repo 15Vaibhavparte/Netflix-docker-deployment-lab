@@ -21,7 +21,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 echo "Pulling the latest code for Build #${IMAGE_TAG}..."
-                git branch: 'main', url: 'https://github.com/15Vaibhavparte/Netflix-Project.git'
+                git 'https://github.com/15Vaibhavparte/Netflix-Project.git'
             }
         }
         
