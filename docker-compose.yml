@@ -7,7 +7,7 @@ services:
   frontend:
     image: parte15/netflix-frontend:${IMAGE_TAG:-latest}
     ports:
-      - "9090:9090"
+      - "9090:8080"
     volumes:
       - myvol:/tmp
     restart: always
