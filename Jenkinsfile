@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         // Your Docker Hub Username
-        DOCKERHUB_USER = 'your_dockerhub_username'
+        DOCKERHUB_USER = 'parte15'
         
         // The ID of the credential we created in Jenkins earlier
         DOCKERHUB_CREDS_ID = 'dockerhub-creds'

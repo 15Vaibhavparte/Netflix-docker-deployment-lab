@@ -24,7 +24,7 @@ services:
       - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   backend:
-    image: your_dockerhub_username/netflix-backend:${IMAGE_TAG:-latest}
+    image: parte15/netflix-backend:${IMAGE_TAG:-latest}
     build: ./backend
     container_name: netflix-backend
     ports:
