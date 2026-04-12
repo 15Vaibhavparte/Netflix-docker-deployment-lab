@@ -1,11 +1,38 @@
+
+version: '3.8'
+
 volumes:
   myvol:
-
 services:
-  netflix-app:
-    image: netflix-image:v3
+  frontend:
+    image: netflix-frontend
     ports:
-      - 9090:8080
+      - "9090:8080"
     volumes:
       - myvol:/tmp
     restart: always
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=netflix_pass
+      - MYSQL_DATABASE=netflix_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    restart: always
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=netflix_pass
+      - DB_NAME=netflix_db
+    depends_on:
+      - db
+
