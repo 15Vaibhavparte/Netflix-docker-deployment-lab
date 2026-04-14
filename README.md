@@ -155,7 +155,7 @@ https://github.com/user-attachments/assets/d51dd255-d92b-4a5e-8254-1518c5208d1c
 1. **Trigger:** A developer modifies the frontend code in the repository (changing the header from "Trending Now" to "Top Picks for You").
 2. **Automation:** The commit instantly triggers the Jenkins pipeline.
 3. **Parallel Execution:** Jenkins compiles the Java artifact and utilizes multiple executors to build and push the Frontend and Backend Docker images to Docker Hub simultaneously.
-4. **Zero-Downtime Deployment:** The EC2 instance pulls the latest `parte15/netflix-frontend:8` image and redeploys the containers.
+4. **Zero-Downtime Deployment:** The EC2 instance pulls the latest `parte15/netflix-frontend:7` image and redeploys the containers.
 5. **Live Result:** The live production site on AWS dynamically updates without manual server intervention.
 
 ---
